@@ -1,0 +1,97 @@
+header{
+    width: 100vw;
+    height: 44px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background: rgba(245, 245, 247, 0.8);
+    z-index: 100;
+
+    .header{
+        width: 1044px;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        input, label{
+            display: none;
+        }
+
+        img{
+            width: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        ul {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // border: 1px solid black;
+
+            li a{
+                font-weight: 400;
+                font-size: 12px;
+                text-align: center;
+                color: #1d1d1f;
+                // border: 1px solid black;
+            }
+        }
+
+        .header_links{
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 833px) {
+    .header{
+        justify-content: space-between !important;
+
+        img:first-child{
+            margin-inline: 24px;
+        }
+
+        ul{
+            width: 100vw !important;
+            height: calc(100vh - 44px) !important;
+            top: 44px;
+            background-color: #ffffff;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline !important;
+            position: fixed;
+            left: -100%;
+            transition: 0.4s;
+            padding: 15px 50px 50px 47px;
+            z-index: 100;
+
+            li a{
+                color: black;
+                font-size: 26px !important;
+                font-weight: 600 !important;
+            }
+            
+        }
+
+        label{
+            display: flex !important;
+        }
+
+        input:checked ~ ul{
+            left: 0;
+        }
+
+        .header_links{
+            gap: 4px !important;
+        }
+    }
+}

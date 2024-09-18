@@ -1,0 +1,19 @@
+.other_accessories{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-evenly;
+    place-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+@media(max-width: 735px){
+    .other_accessories{
+        grid-template-columns: repeat((1, 1fr)) !important;
+        grid-template-rows: repeat((1, 1fr)) !important;
+        gap: 12px;
+        padding: 0px;
+    }
+}

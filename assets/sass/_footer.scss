@@ -1,0 +1,114 @@
+footer{
+    width: 980px;
+    margin: 12px auto;
+    padding-block: 12px;
+    border-block: 1px solid rgba(0, 0, 0, 0.56);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .footer_links_holder{
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0px;
+
+        .footer_link_column{
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: center;
+    
+    
+            .footer_link{
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                justify-content: center;
+
+                // margin-block: 5px;
+                padding-block: 15px;
+
+                input{
+                    display: none;
+                }
+        
+                h1{
+                    font-weight: 600;
+                    font-size: 12px;
+                    color: rgba(0, 0, 0, 0.88);
+                }
+        
+                ul{
+                    gap: 11px;
+        
+                    li a{
+                        font-weight: 400;
+                        font-size: 11px;
+                        color: rgba(0, 0, 0, 0.72);
+                    }
+                }
+            }
+        }
+    }
+    h6{
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.56);
+        margin-top: 38px;
+
+        a{
+            font-weight: 400;
+            font-size: 11px;
+            text-decoration: underline;
+            color: #06c;
+        }
+    }
+}
+
+@media(max-width: 1024px){
+    footer{
+        width: 95.7vw;
+    }
+}
+
+@media(max-width: 735px){
+    .footer_links_holder{
+        flex-direction: column !important;
+        gap: 0px;
+        padding: 15px;
+        justify-content: center;
+
+        .footer_link{
+            width: 90vw !important;
+            border-bottom: 1px solid rgb(184, 184, 184);
+            padding: 7px;
+            margin: 0 auto;
+            gap: 0px !important;
+
+            ul{
+                display: none;
+                padding: 7px;
+
+            }
+
+            #shop-learn:checked ~ #shop-learn-list,
+            #apple-wallet:checked ~ #apple-wallet-list,
+            #account:checked ~ #account-list,
+            #entertainment:checked ~ #entertainment-list,
+            #apple-store:checked ~ #apple-store-list,
+            #business:checked ~ #business-list,
+            #education:checked ~ #education-list,
+            #healthcare:checked ~ #healthcare-list,
+            #government:checked ~ #government-list,
+            #values:checked ~ #values-list,
+            #about-apple:checked ~ #about-apple-list {
+                display: flex;
+                flex-direction: column;
+                padding-left: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
